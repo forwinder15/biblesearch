@@ -4,10 +4,11 @@ const sub = document.querySelector('.sub');
 fetch('https://api.esv.org/v3/passage/search/?q=rabble', {
 mode: 'no-cors',
 withCredentials: true,
-credentials: 'include',
-header: {
+credentials: 'same-origin',
+header:{
   'Authorization': 'Token e9db23a61803d3ffcdb9c2caa5a8f3f2b98ca101'
-}})
+}
+})
   .then(function(response) {
     return console.log(response);
   })
