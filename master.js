@@ -2,16 +2,18 @@ const bible = "me Epaphras who is one of you a servant of Christ Jesus greets yo
 const sub = document.querySelector('.sub');
 
 fetch('https://api.esv.org/v3/passage/search/?q=rabble', {
+mode: 'no-cors',
+withCredentials: true,
 credentials: 'include',
 header: {
   'Authorization': 'Token e9db23a61803d3ffcdb9c2caa5a8f3f2b98ca101'
 }})
   .then(function(response) {
-    return response.json();
+    return console.log(response);
   })
-  .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
-  });
+.catch(function(error) {
+  console.log('There has been a problem with your fetch operation: ', error.message);
+});
 
 function search(e) {
   const word = document.querySelector('.word').value;
