@@ -1,12 +1,12 @@
 const sub = document.querySelector('.sub');
 
-
+//What happens when the enter key is pressed or the search button is clicked 
 function search(e) {
   const word = document.querySelector('.word').value;
-
+//fetch the list of verses containing the word the user inputs
   fetch(`https://api.esv.org/v3/passage/search/?q=${word}`, {
       headers: {
-        'Authorization': 'Token e9db23a61803d3ffcdb9c2caa5a8f3f2b98ca101'
+        'Authorization': 'Token e9db23a61803d3ffcdb9c2caa5a8f3f2b98ca101' //ESV API Token
       }
     })
     .then(function(response) {
@@ -23,7 +23,7 @@ function search(e) {
 };
 
 
-
+//Click Search button
 sub.addEventListener('click', search);
 
 // enter key to submit
