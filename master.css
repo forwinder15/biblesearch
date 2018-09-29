@@ -1,52 +1,56 @@
 html {
-      box-sizing: border-box;
-      background:url('https://www.ucg.org/files/styles/full_grid9/public/image/article/2018/01/23/bible-faq-does-the-bible-contain-racist-stories.jpg') center no-repeat;
-      background-size:cover;
-      min-height:100vh;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: Futura,"Trebuchet MS",Arial,sans-serif
-    }
-    *, *:before, *:after {box-sizing: inherit;}
+  box-sizing: border-box;
+  background: url('https://www.ucg.org/files/styles/full_grid9/public/image/article/2018/01/23/bible-faq-does-the-bible-contain-racist-stories.jpg') center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif
+}
 
-h1, h3{
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h3 {
   color: #Faf3ff;
-   text-shadow: 0 0 .5rem black;
+  text-shadow: 0 0 .5rem black;
 }
 
 .word {
-margin-top: 20px;
-color: white;
-width: 350px;
-height: 55px;
-border-radius: 100px;
-padding: 10px;
-margin-bottom: 10px;
-outline: none;
-background: rgba(0, 0, 0, 0.2);
-border: 1px solid #fff;
-transition: all 0.3s ease;
-font-size: 16px;
+  margin-top: 20px;
+  color: white;
+  width: 350px;
+  height: 55px;
+  border-radius: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
 
 .sub {
-border-radius: 100px;
-color: #F3E9D2;
-font-size: 26px;
-height: 45px;
-width: 175px;
-text-align: center;
-outline: none; background: #1A936F;
-border: 1px solid #eee;
-box-shadow: 8px 10px 20px 0px rgba(251, 61, 73, 0.15);
-transition: all 0.3s ease;
+  border-radius: 100px;
+  color: #F3E9D2;
+  font-size: 26px;
+  height: 45px;
+  width: 175px;
+  text-align: center;
+  outline: none;
+  background: #1A936F;
+  border: 1px solid #eee;
+  box-shadow: 8px 10px 20px 0px rgba(251, 61, 73, 0.15);
+  transition: all 0.3s ease;
 }
 
 .sub:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
