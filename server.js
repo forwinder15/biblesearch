@@ -24,3 +24,13 @@ console.log('responing to root');
 app.listen(3003, () => {
   console.log('server is up on 3003');
 })
+
+//api router
+const router = express.Router()
+
+router.get('/routes/api.js', (req, res) => {
+  console.log('messege');
+  res.end();
+})
+
+app.use(router)
