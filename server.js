@@ -11,13 +11,8 @@ app.use(express.static('\public'))
 
 app.use(morgan('short'));
 
-app.post('/', (req, res) => {
-  const word = req.body.word_search;
-  console.log(word);
-})
-
 app.get('/', (req, res) => {
-console.log('responing to root');
+console.log(req.query.s)
 })
 
 //local host
