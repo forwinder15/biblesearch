@@ -2,30 +2,26 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const bodyParser = require('body-parser')
+const fetch = require('node-fetch');
 
-app.use(bodyParser.urlencoded({extended: false}));
-
-
-app.use(express.static('\public'))
-
+//show frontend
+app.use(express.static('\public'));
+//show short issues
 app.use(morgan('short'));
 
-app.get('/', (req, res) => {
-console.log(req.query.s)
-})
+app.get('/', (req, res) => { console.log(req.params.wordSearched)})
 
 //local host
 app.listen(3003, () => {
   console.log('server is up on 3003');
-})
+});
 
 //api router
-const router = express.Router()
+//const router = express.Router()
 
-router.get('/routes/api.js', (req, res) => {
-  console.log('messege');
-  res.end();
-})
+//router.get('/routes', (req, res) => {
+  //console.log('messege');
+  //res.end();
+//})
 
-app.use(router)
+//app.use(router)
