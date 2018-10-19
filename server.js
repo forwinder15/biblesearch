@@ -9,7 +9,7 @@ app.use(express.static('\public'));
 //show short issues
 app.use(morgan('short'));
 
-app.get('/', (req, res) => { console.log(req.params.wordSearched)})
+app.get('/:wordSearched', (req, res) => { console.log(req.params.wordSearched)})
 
 //local host
 app.listen(3003, () => {
