@@ -3,12 +3,12 @@
 document.querySelector('.sub').addEventListener('click', function (e) {
   e.preventDefault()
   const wordSearched = document.querySelector('.word').value;
-  fetch(`/?s=${wordSearched}`)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(myJson) {
-      const number = myJson.total_results;
+  fetch(`/${wordSearched}`)
+  
+    .then(function(answer) {
+      console.log(answer);
+      const number = answer.total_results;
+      console.log(number);
       const tag = document.querySelector(".tagg").innerHTML = `The word ${wordSearched} was used ${number} times!`;
       return tag
     })
